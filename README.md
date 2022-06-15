@@ -1,15 +1,12 @@
-# Basic Sample Hardhat Project
+# Voice Engine 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This smart contract is designed to create a voiting with a list of candidates, with the ability for any other users to choose a winner.
+To participate in the voting user should deposit 0.01ETH.
+The winner of the vote takes the entire amount collected, minus the commission
 
-Try running some of the following tasks:
+## Voice Engine in Rinkeby Testnet Network
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+This contract was deployed to Rinkeby test network https://rinkeby.etherscan.io/
+
+Contract address: 
+`0x9d481573291D2dE3b42074Cf9b3963AA5527BE05`
