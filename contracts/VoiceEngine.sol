@@ -166,6 +166,14 @@ contract VoiceEngine {
         return votes[_voteIndex].allCandidates;
     }
 
+    function getCandidateVoices(uint256 _voteIndex, address _candidateAddr)
+        external
+        view
+        returns (uint256)
+    {
+        return votes[_voteIndex].candidates[_candidateAddr].voiceCounter;
+    }
+
     function getWinner(uint256 _voteIndex) external view returns (address) {
         return votes[_voteIndex].winner;
     }

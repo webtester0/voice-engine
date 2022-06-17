@@ -354,4 +354,15 @@ describe("VoiceEngine", function () {
       expect(contractBalance).to.eq(ethers.utils.parseEther("0.01"));
     });
   });
+
+  describe("getCandidateVoices", function () {
+    it("should return candidate voices", async function () {
+      await voice.createVote(0, [addr1.address, addr2.address], 2);
+      await voice.makeVoting(0, addr1.address, {
+        value: ethers.utils.parseEther("0.01"),
+      });
+      const voices = await voice.getCandidateVoices(0, addr1.address);
+      expect(parseInt(voices.toString())).to.eq(1);
+    });
+  });
 });
