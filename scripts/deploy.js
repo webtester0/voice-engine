@@ -1,6 +1,8 @@
 const main = async () => {
+  const deployer = await hre.ethers.getSigners();
   const vEngineContractFactory = await hre.ethers.getContractFactory(
-    "VoiceEngine"
+    "VoiceEngine",
+    deployer
   );
   const vEngineContract = await vEngineContractFactory.deploy();
   await vEngineContract.deployed();

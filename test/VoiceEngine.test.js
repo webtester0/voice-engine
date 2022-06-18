@@ -213,6 +213,10 @@ describe("VoiceEngine", function () {
         value: ethers.utils.parseEther("0.01"),
       });
 
+      await voice.connect(addr3).makeVoting(0, addr2.address, {
+        value: ethers.utils.parseEther("0.01"),
+      });
+
       await expect(makeNewVoice)
         .to.emit(voice, "NewVote")
         .withArgs(0, addr1.address);
@@ -220,7 +224,7 @@ describe("VoiceEngine", function () {
       const currentVoiting = await voice.votes(0);
       expect(currentVoiting.winner).to.eq(addr1.address);
       expect(currentVoiting.maxVotes).to.eq(1);
-      expect(currentVoiting.participantsCounter).to.eq(1);
+      expect(currentVoiting.participantsCounter).to.eq(2);
     });
   });
 
