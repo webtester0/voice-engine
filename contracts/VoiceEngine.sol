@@ -43,7 +43,6 @@ contract VoiceEngine {
 
     modifier onlyOwner(address _to) {
         require(msg.sender == owner, "You are not owner");
-        require(_to != address(0), "Incorrect address");
         _;
     }
 

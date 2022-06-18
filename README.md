@@ -4,7 +4,9 @@ This smart contract is designed to create a voiting with a list of candidates, w
 
 To participate in the voting user should deposit 0.01ETH.
 
-The winner of the vote takes the entire amount collected, minus the commission
+The winner of the vote takes the entire amount collected, minus the commission.
+
+## 
 
 ## Voice Engine in Rinkeby Testnet Network
 
