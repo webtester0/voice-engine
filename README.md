@@ -6,7 +6,18 @@ To participate in the voting user should deposit 0.01ETH.
 
 The winner of the vote takes the entire amount collected, minus the commission.
 
-## 
+## Description
+
+### Unit tests
+
+For run unit-tests use cmd it will run `npx hardhat coverage`:
+
+```
+npm test
+```
+
+Coverege 100%:
+![](https://i2.paste.pics/f29a84a7c8ff9897588634d073340b1b.png)
 
 ## Voice Engine in Rinkeby Testnet Network
 
