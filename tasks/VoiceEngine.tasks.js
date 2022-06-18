@@ -122,6 +122,7 @@ task("finishVote", "Finish the voiting")
     );
 
     try {
+      await voice.finishVote(index);
       const benefits = await voice.getWinnerBenefits(index);
       const winner = await voice.getWinner(index);
       const winnerVoices = await voice.getCandidateVoices(index, winner);
