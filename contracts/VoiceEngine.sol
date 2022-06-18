@@ -135,6 +135,7 @@ contract VoiceEngine {
             "Not enough funds on available balance"
         );
         _to.transfer(amount);
+        availableBalance -= amount;
     }
 
     function finishVote(uint256 _voteIndex) external {

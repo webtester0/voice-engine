@@ -6,6 +6,8 @@ typechain
 *.txt
 .vscode
 .DS_Store
+*.png
+README.html
 
 #Hardhat files
 cache
