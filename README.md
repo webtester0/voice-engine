@@ -117,7 +117,7 @@ For global options help run: hardhat help
 1. Create new voting by owner with duration 60s
 
 ```
-npx hardhat createVote --index 0 --candidates 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db --duration 60 --network localhost
+npx hardhat createVote --index 0 --candidates 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2, 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db --duration 60 --network localhost
 ```
 ![](https://i2.paste.pics/80cf4caede8eeddd01e19acf5f630d71.png)
 2. Make a vote for first candidate
@@ -160,4 +160,4 @@ To run tasks, just change network value to `rinkeby`
 This contract was deployed to Rinkeby test network https://rinkeby.etherscan.io/
 
 Contract address: 
-`0x6ABbbA361B1dE9D37c7Ed91B0749151Bad9275F1`
+`0x86b3Acc1a5FD437A9fe6664aa4eE161b34888B73`
