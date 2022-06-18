@@ -142,7 +142,7 @@ contract VoiceEngine {
         require(
             block.timestamp > votes[_voteIndex].endAt &&
                 votes[_voteIndex].exist,
-            "This voting is not finished"
+            "This voting is not finished or exist"
         );
 
         votes[_voteIndex].exist = false;
