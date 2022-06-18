@@ -112,7 +112,7 @@ finishVote: Finish the voiting
 For global options help run: hardhat help
 ```
 
-#### Examples of interactions with deployed smart-contract
+#### Examples of interactions with deployed smart-contract at localhost network
 
 1. Create new voting by owner with duration 60s
 
@@ -140,7 +140,24 @@ npx hardhat finishVote --index 0 --network localhost
 ![](https://i2.paste.pics/4b1157f477c48365ad2b402361987178.png)
 ## Voice Engine in Rinkeby Testnet Network
 
+### Deploy to rinkeby
+
+To deploy this smart-contract ot rinkeby network, just change env vars:
+
+- CONTRACT_ADDRESS -> address of deployed contract to rinkeby
+- PRIVATE_KEY -> private key of your rinkeby account (e.g. metamask)
+- PROD_ALCHEMY_KEY -> private api key of Alchemy
+- STAGING_ALCHEMY_KEY -> private api URL of Alchemy
+
+Run cmd: 
+
+```
+npx hardhat run scripts/deploy.js --network rinkeby
+```
+
+To run tasks, just change network value to `rinkeby`
+### Example of deployed smart-contract
 This contract was deployed to Rinkeby test network https://rinkeby.etherscan.io/
 
 Contract address: 
-`0x9d481573291D2dE3b42074Cf9b3963AA5527BE05`
+`0x6ABbbA361B1dE9D37c7Ed91B0749151Bad9275F1`
