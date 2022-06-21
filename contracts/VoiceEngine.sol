@@ -29,10 +29,14 @@ contract VoiceEngine {
 
     mapping(uint256 => Vote) public votes;
 
-    event VoteCreated(uint256 voteIndex, address[] candidates, uint256 endAt);
-    event NewVote(uint256 voteIndex, address candidate);
+    event VoteCreated(
+        uint256 indexed voteIndex,
+        address[] candidates,
+        uint256 endAt
+    );
+    event NewVote(uint256 indexed voteIndex, address candidate);
     event VoteFinished(
-        address voteWinner,
+        address indexed voteWinner,
         uint256 winnerVotes,
         uint256 winnerBenefits
     );
@@ -60,7 +64,6 @@ contract VoiceEngine {
             _canditates.length > 1,
             "List of candidates have to contain at least 2 candidates"
         );
-
         for (uint256 i = 0; i < _canditates.length; i++) {
             require(
                 votes[_voteIndex].candidates[_canditates[i]].registered != true,
@@ -69,7 +72,6 @@ contract VoiceEngine {
             votes[_voteIndex].candidates[_canditates[i]].registered = true;
             votes[_voteIndex].allCandidates.push(_canditates[i]);
         }
-
         uint256 duration = _duration == 0 ? DURATION : _duration;
         votes[_voteIndex].startAt = block.timestamp;
         votes[_voteIndex].endAt = votes[_voteIndex].startAt + duration;
@@ -134,8 +136,8 @@ contract VoiceEngine {
             availableBalance >= amount,
             "Not enough funds on available balance"
         );
-        _to.transfer(amount);
         availableBalance -= amount;
+        _to.transfer(amount);
     }
 
     function finishVote(uint256 _voteIndex) external {
